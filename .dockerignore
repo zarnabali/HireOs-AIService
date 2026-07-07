@@ -1,0 +1,16 @@
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+test-results/
+test-data/
+Agentic-Document-Extraction-PDF/.git/
+Agentic-Document-Extraction-PDF/.venv/
+Agentic-Document-Extraction-PDF/venv/
+Agentic-Document-Extraction-PDF/__pycache__/
+Agentic-Document-Extraction-PDF/.pytest_cache/

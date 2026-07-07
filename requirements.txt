@@ -1,0 +1,87 @@
+# HireOS AI-Service runtime dependencies.
+#
+# Install from the AI-Service root:
+#   pip install -r requirements.txt
+#
+# This file intentionally includes the runtime dependencies needed by
+# AI-Service/Agentic-Document-Extraction-PDF so the old extractor is imported
+# as an internal feature dependency. You do not need to start the extractor's
+# standalone FastAPI/Next.js product separately.
+
+# API framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.17
+starlette>=0.41.0
+
+# Data validation and settings
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
+python-dotenv>=1.0.1
+pyyaml>=6.0.0
+
+# OpenAI-compatible LLM clients
+openai>=1.55.0
+httpx>=0.27.0
+aiohttp>=3.11.0
+tenacity>=9.0.0
+
+# Agent framework
+langchain>=1.0.0
+langchain-core>=0.3.25
+langchain-community>=0.3.12
+langchain-openai>=0.2.14
+langgraph>=0.2.60
+langgraph-checkpoint>=2.0.10
+langgraph-checkpoint-sqlite>=2.0.0
+langsmith>=0.1.0
+
+# Memory and vector support used by the wrapped extractor
+mem0ai>=0.1.29
+faiss-cpu>=1.9.0
+sentence-transformers>=3.3.0
+
+# PDF, document, image, and OCR-adjacent processing
+PyMuPDF>=1.25.0
+Pillow>=11.0.0
+opencv-python>=4.10.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+python-docx>=1.1.0
+pydicom>=2.4.0
+
+# Redis/Celery async jobs
+celery>=5.4.0
+kombu>=5.4.0
+redis>=5.2.0
+
+# Security dependencies used by the wrapped extractor
+cryptography>=43.0.0
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.2.0
+
+# Export and data utilities used by the wrapped extractor
+openpyxl>=3.1.5
+pandas>=2.2.0
+xlsxwriter>=3.2.0
+
+# Legacy extractor optional UI/runtime imports
+streamlit>=1.40.0
+streamlit-extras>=0.4.0
+
+# Monitoring and structured logging
+prometheus-client>=0.21.0
+structlog>=24.4.0
+python-json-logger>=2.0.7
+
+# Type stubs used by the extractor development/test modules
+types-Pillow>=10.2.0
+types-redis>=4.6.0
+types-PyYAML>=6.0.0
+types-python-jose>=3.3.0
+types-passlib>=1.7.7
+
+# Local verification and tests
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
